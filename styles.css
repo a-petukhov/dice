@@ -1,0 +1,106 @@
+body {
+  background-color: #283149;
+  color: #dbedf3;
+  font-family: "Ubuntu Mono", monospace;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: #da0463;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.btn {
+  color: #da0463;
+  border: 5px solid;
+  border-radius: 15px;
+  border-color: #da0463;
+  font-size: 1.75rem;
+
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.btn:hover {
+  color: #404b69;
+  background-color: #dbedf3;
+  border-color: #404b69;
+}
+
+.container-fluid {
+  padding: 3% 10%;
+}
+
+.header-title {
+  padding: 10% 0 5%;
+}
+
+.dice {
+  color: #dbedf3;
+}
+
+.dice-card-body {
+  padding: 6% 3%;
+  position: relative;
+}
+
+.dice-card-body,
+.dice-header {
+  border: 5px solid;
+  border-color: #da0463;
+  border-radius: 15px;
+  background-color: #404b69;
+  margin: 2% 5%;
+}
+
+.dice-header h2 {
+  margin-bottom: 0;
+}
+
+.dice-header {
+  font-size: 1.75rem;
+  line-height: 1;
+  padding: 3% 1%;
+}
+
+.dice-header h2 {
+  color: #dbedf3;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.dice-card-header h3 {
+  color: #404b69;
+  background-color: #dbedf3;
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 15px;
+}
+
+.dice-button {
+  padding: 3% 0;
+}
+
+.fa-shake {
+  --fa-animation-duration: 2s;
+  --fa-animation-iteration-count: 1;
+}
+
+.footer {
+  font-size: 1.25rem;
+  padding-top: 50px;
+}
+
+.footer i {
+  margin: 1.5rem 1rem;
+}
+
+.footer a {
+  color: #dbedf3;
+}
+
+.footer a:hover {
+  color: #da0463;
+}
