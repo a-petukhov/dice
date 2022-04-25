@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;900&family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -30,68 +30,82 @@
   </head>
 
   <body>
-    <!-- Header Section -->
-    <section class="container-fluid">
-      <div class="header-title">
-        <h1>
-          Welcome to the <br />
-          <!-- <i class="fa-solid fa-dice fa-bounce"></i> -->
-          Dice Game!
-          <!-- <i class="fa-solid fa-dice fa-bounce"></i> -->
-        </h1>
-      </div>
-    </section>
-
-    <!-- Dices Section -->
-    <section class="container-fluid">
-      <div class="dice-card">
-        <div class="dice-card-body">
-          <div class="dice-card-header">
-            <h3>Player One</h3>
-          </div>
-
-          <div>
-            <i class="fa-solid fa-dice-one fa-10x dice"></i>
+    <div class="container-fluid background-holder">
+      <!-- Header Section -->
+      <section class="container-fluid header-section">
+        <div class="header-content">
+          <div class="text">
+            <h1><i class="fa-solid fa-dice"></i> Dice Game!</h1>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="dice-header">
-        <h2>Press button below to begin</h2>
-      </div>
-
-      <div class="dice-card">
-        <div class="dice-card-body">
-          <div class="dice-card-header">
-            <h3>Player Two</h3>
+      <!-- Dices Section -->
+      <section class="container-fluid dice-section">
+        <div class="row">
+          <div class="col-md-12 d-none d-md-block d-lg-none">
+            <div class="">
+              <div class="dice-header">
+                <h2>Press button below to begin</h2>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <i class="fa-solid fa-dice-two fa-10x dice"></i>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="player-card">
+              <div class="player-card-heading">
+                <h3>Player One</h3>
+              </div>
+
+              <div class="player-card-body">
+                <i class="fa-dice-one fa-solid fa-8x dice"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-sm-block d-md-none d-lg-block">
+            <div class="player-card-header">
+              <div class="dice-header">
+                <h2>Press button below to begin</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="player-card">
+              <div class="player-card-heading">
+                <h3>Player Two</h3>
+              </div>
+              <div class="player-card-body">
+                <i class="fa-dice-two fa-solid fa-8x dice"></i>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="dice-button d-flex justify-content-center">
+          <button
+            class="btn btn__secondary"
+            onclick="diceShake(); setTimeout(rollDice, 600);"
+          >
+            Roll Dice
+            <i class="fa-solid fa-dice"></i>
+          </button>
+        </div>
+      </section>
 
-      <div class="dice-button">
-        <button class="btn btn-lg btn-outline-light" onclick="rollDice()">
-          Roll Dice
-          <i class="fa-regular fa-dice"></i>
-        </button>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="container-fluid">
-      <div class="footer">
-        <a href="https://www.facebook.com/petukhov.lx"
-          ><i class="footer-icons fa-brands fa-facebook-f fa-2x"></i
-        ></a>
-        <a href="mailto:petukhov.lx@gmail.com"
-          ><i class="footer-icons fa-solid fa-envelope fa-2x"></i
-        ></a>
-        <p>© Copyright 2022 Oleksii Petukhov</p>
-      </div>
-    </footer>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <a href="https://www.facebook.com/petukhov.lx"
+            ><i class="fa-brands fa-facebook-f fa-2x"></i
+          ></a>
+          <a href="mailto:petukhov.lx@gmail.com"
+            ><i class="fa-solid fa-envelope fa-2x"></i
+          ></a>
+          <p>© Copyright 2022 Oleksii Petukhov</p>
+        </div>
+      </footer>
+    </div>
 
     <!-- Bootstrap Bundle -->
     <script

@@ -1,106 +1,171 @@
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+
+  --white: #ffffff;
+  --greyLight-1: #e4ebf5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+}
+
 body {
-  background-color: #283149;
-  color: #dbedf3;
-  font-family: "Ubuntu Mono", monospace;
+  background: var(--greyLight-1);
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
-h1,
-h2,
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  color: var(--primary);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
 h3 {
-  color: #da0463;
-  font-family: "Press Start 2P", cursive;
-  font-size: 2rem;
-  line-height: 1.5;
+  color: var(--primary);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
 }
 
-.btn {
-  color: #da0463;
-  border: 5px solid;
-  border-radius: 15px;
-  border-color: #da0463;
-  font-size: 1.75rem;
+$shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2),
+  -0.2rem -0.2rem 0.5rem var(--white);
+$inner-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
+  inset -0.2rem -0.2rem 0.5rem var(--white);
 
-  font-family: "Ubuntu Mono", monospace;
-}
-
-.btn:hover {
-  color: #404b69;
-  background-color: #dbedf3;
-  border-color: #404b69;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 .container-fluid {
-  padding: 3% 10%;
+  background: var(--greyLight-1);
 }
 
-.header-title {
-  padding: 10% 0 5%;
+.header-section {
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2),
+    -0.2rem -0.2rem 1.8rem var(--white);
+  padding: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.dice {
-  color: #dbedf3;
-}
-
-.dice-card-body {
-  padding: 6% 3%;
-  position: relative;
-}
-
-.dice-card-body,
-.dice-header {
-  border: 5px solid;
-  border-color: #da0463;
-  border-radius: 15px;
-  background-color: #404b69;
-  margin: 2% 5%;
-}
-
-.dice-header h2 {
-  margin-bottom: 0;
-}
-
-.dice-header {
-  font-size: 1.75rem;
-  line-height: 1;
-  padding: 3% 1%;
-}
-
-.dice-header h2 {
-  color: #dbedf3;
-  font-family: "Ubuntu Mono", monospace;
-}
-
-.dice-card-header h3 {
-  color: #404b69;
-  background-color: #dbedf3;
-  font-size: 1.5rem;
-  position: relative;
-  bottom: 15px;
+.header-content {
+  border-radius: 2rem;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
+    inset -0.2rem -0.2rem 0.5rem var(--white);
+  margin: 2rem;
+  padding: 1rem;
 }
 
 .dice-button {
-  padding: 3% 0;
+  align-items: center;
 }
 
-.fa-shake {
-  --fa-animation-duration: 2s;
-  --fa-animation-iteration-count: 1;
+.dice-section {
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2),
+    -0.2rem -0.2rem 1.8rem var(--white);
+  padding: 4rem;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
-.footer {
-  font-size: 1.25rem;
-  padding-top: 50px;
+.player-card {
+  border-radius: 1rem;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
+    inset -0.2rem -0.2rem 0.5rem var(--white);
+  margin: 2rem 0;
+  padding: 2rem;
 }
 
-.footer i {
-  margin: 1.5rem 1rem;
+.player-card-header {
+  margin: 2rem 0;
+  padding: 2rem;
 }
 
-.footer a {
-  color: #dbedf3;
+.dice {
+  color: #5b0eeb;
 }
 
-.footer a:hover {
-  color: #da0463;
+.player-card-heading {
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2),
+    -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.btn {
+  width: 15rem;
+  height: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2),
+    -0.2rem -0.2rem 0.5rem var(--white);
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.btn__secondary {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  color: var(--greyDark);
+}
+
+.btn__secondary:hover {
+  color: var(--primary);
+}
+
+.btn__secondary:active {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
+    inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+a {
+  color: var(--greyDark);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+p {
+  color: var(--greyDark);
+}
+
+div.text {
+  background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
+  background-size: 300%;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flow 15s ease-in-out infinite;
+  -moz-animation: flow 15s ease-in-out infinite;
+  -webkit-animation: flow 15s ease-in-out infinite;
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

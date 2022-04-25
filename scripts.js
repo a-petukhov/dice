@@ -1,7 +1,7 @@
-var twoDiceIcons = document.querySelectorAll(".dice");
-var firstDiceIcon = twoDiceIcons[0];
-var secondDiceIcon = twoDiceIcons[1];
-var diceHeader = document.querySelector(".dice-header h2");
+var bothDiceIcons = document.querySelectorAll(".dice");
+var firstDiceIcon = bothDiceIcons[0];
+var secondDiceIcon = bothDiceIcons[1];
+var diceHeader = document.querySelectorAll(".dice-header h2");
 var diceHeaderOptions = [
   "Player One Wins!",
   "Player Two Wins!",
@@ -22,22 +22,34 @@ function randomInt(min, max) {
 }
 
 function rollDice() {
-  let firstDiceNumber = diceAnimation(firstDiceIcon);
-  let secondDiceNumber = diceAnimation(secondDiceIcon);
+  let firstDiceNumber = newDice(firstDiceIcon);
+  let secondDiceNumber = newDice(secondDiceIcon);
 
   if (firstDiceNumber === secondDiceNumber) {
-    diceHeader.textContent = diceHeaderOptions[2];
+    diceHeader[0].textContent = diceHeaderOptions[2];
+    diceHeader[1].textContent = diceHeaderOptions[2];
   } else if (firstDiceNumber < secondDiceNumber) {
-    diceHeader.textContent = diceHeaderOptions[1];
+    diceHeader[0].textContent = diceHeaderOptions[1];
+    diceHeader[1].textContent = diceHeaderOptions[1];
   } else {
-    diceHeader.textContent = diceHeaderOptions[0];
+    diceHeader[0].textContent = diceHeaderOptions[0];
+    diceHeader[1].textContent = diceHeaderOptions[0];
   }
+  clearTimeout();
 }
 
-function diceAnimation(dice) {
-  dice.classList.add("fa-shake");
-  dice.classList.remove("fa-dice-one");
+function newDice(dice) {
+  for (let i = 0; i < diceOptions.length; i++) {
+    dice.classList.remove(diceOptions[i]);
+  }
   let diceNumber = randomInt(0, 5);
   dice.classList.add(diceOptions[diceNumber]);
+  dice.classList.remove("fa-shake");
   return diceNumber;
+}
+
+function diceShake() {
+  for (let j = 0; j < 2; j++) {
+    bothDiceIcons[j].classList.add("fa-shake");
+  }
 }
