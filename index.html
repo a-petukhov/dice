@@ -30,7 +30,7 @@
   </head>
 
   <body>
-    <div class="container-fluid background-holder">
+    <div class="container-fluid page-holder">
       <!-- Header Section -->
       <section class="container-fluid header-section">
         <div class="header-content">
@@ -43,7 +43,7 @@
       <!-- Dices Section -->
       <section class="container-fluid dice-section">
         <div class="row">
-          <div class="col-md-12 d-none d-md-block d-lg-none">
+          <div class="col-lg-12 d-none d-lg-block d-xl-none">
             <div class="">
               <div class="dice-header">
                 <h2>Press button below to begin</h2>
@@ -51,33 +51,42 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-xl-4 col-lg-6">
             <div class="player-card">
               <div class="player-card-heading">
                 <h3>Player One</h3>
               </div>
 
               <div class="player-card-body">
-                <i class="fa-dice-one fa-solid fa-8x dice"></i>
+                <i class="fa-dice-one fa-solid fa-10x dice"></i>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 d-sm-block d-md-none d-lg-block">
-            <div class="player-card-header">
+          <div class="col-xl-4 d-md-block d-lg-none d-xl-block">
+            <div
+              class="
+                player-card-header
+                d-flex
+                h-100
+                align-items-center
+                justify-content-center
+                my-0
+              "
+            >
               <div class="dice-header">
                 <h2>Press button below to begin</h2>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-xl-4 col-lg-6">
             <div class="player-card">
               <div class="player-card-heading">
                 <h3>Player Two</h3>
               </div>
               <div class="player-card-body">
-                <i class="fa-dice-two fa-solid fa-8x dice"></i>
+                <i class="fa-dice-two fa-solid fa-10x dice"></i>
               </div>
             </div>
           </div>
@@ -94,7 +103,7 @@
       </section>
 
       <!-- Footer Section -->
-      <footer class="footer">
+      <footer class="footer py-3">
         <div class="container-fluid">
           <a href="https://www.facebook.com/petukhov.lx"
             ><i class="fa-brands fa-facebook-f fa-2x"></i
