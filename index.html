@@ -44,10 +44,8 @@
       <section class="container-fluid dice-section">
         <div class="row">
           <div class="col-lg-12 d-none d-lg-block d-xl-none">
-            <div class="">
-              <div class="dice-header">
-                <h2>Press button below to begin</h2>
-              </div>
+            <div class="dice-header dice-header-animated">
+              <h2>Press button below to begin</h2>
             </div>
           </div>
 
@@ -56,7 +54,6 @@
               <div class="player-card-heading">
                 <h3>Player One</h3>
               </div>
-
               <div class="player-card-body">
                 <i class="fa-dice-one fa-solid fa-10x dice"></i>
               </div>
@@ -74,7 +71,7 @@
                 my-0
               "
             >
-              <div class="dice-header">
+              <div class="dice-header dice-header-animated">
                 <h2>Press button below to begin</h2>
               </div>
             </div>
@@ -92,10 +89,7 @@
           </div>
         </div>
         <div class="dice-button d-flex justify-content-center">
-          <button
-            class="btn btn__secondary"
-            onclick="diceShake(); setTimeout(rollDice, 600);"
-          >
+          <button class="btn" onclick="diceShake(); setTimeout(rollDice, 600);">
             Roll Dice
             <i class="fa-solid fa-dice"></i>
           </button>
